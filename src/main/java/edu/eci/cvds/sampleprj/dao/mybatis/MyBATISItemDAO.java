@@ -37,5 +37,7 @@ public class MyBATISItemDAO implements ItemDAO{
 
 
     }
+    @Override
+    public void addItem(Item i){}
 
 }
