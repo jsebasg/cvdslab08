@@ -29,7 +29,7 @@ public class ServiciosAlquilerTest {
     @Before
     public void setUp() {
     }
-
+    /*
     @Test
     public void emptyDB() {
         for(int i = 0; i < 100; i += 10) {
@@ -44,7 +44,7 @@ public class ServiciosAlquilerTest {
             // Validate no Client was found;
             Assert.assertTrue(r);
         };
-    }
+    }*/
 }
 
 
