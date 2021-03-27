@@ -1,0 +1,78 @@
+<!DOCTYPE html >
+    <html   xmlns="http://www.w3c.org/1999/xhtml"
+            xmlns:h="http://xmlns.jcp.org/jsf/html"
+            xmlns:p="http://primefaces.org/ui"
+            xmlns:f="http://java.sun.com/jsf/core">
+
+            
+        <h:head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Document</title>
+            
+
+        </h:head>
+        <h:body>
+            
+            <h:form id="guess_form">
+   
+                <center><h:body style="background-color:#990012"></h:body>
+                    <img src = "hombre.jpg" align= "right" height="500" width="500"/>  
+                    <img src = "senora.jpg" align= "left" height="500" width="550"/>
+                <p:outputLabel value= "Numero a adivinar ( entre 1-10 )   " style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ; color:white  " />
+                
+                <p:outputLabel value= "#{guessBean.number}" style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ; color:white  "  />
+                <br/>
+                <br/>
+                <p:inputText value = "#{guessBean.intento}" type="number" name="numero" style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif "/>
+                <p:outputLabel value= " #{guessBean.correction}" style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ; color:white  "  />
+                <br/>
+                <br/>
+                <p:outputLabel value= "Estado del juego: " style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ; color:white  " />
+                <p:outputLabel value= "#{guessBean.win}" style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ; color:white  " />
+                
+                <br/>
+                <br/>
+                <p:outputLabel value= "Premio actual: " style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ; color:white  "/>
+                <p:outputLabel value= "$ #{guessBean.score}" style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ; color:white  "/>
+                
+                <br/>
+                <br/>
+                <p:outputLabel value= "Intentos: " style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ; color:white  " />
+                <p:outputLabel value= "#{guessBean.trys}" style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ; color:white  "/>
+                <br/>
+                <br/>
+                
+                <p:outputLabel value= "Listado de intentos: " style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ; color:white  " />
+                <br/>
+                <p:outputLabel value= "#{guessBean.listado}" style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  ; color:white  " />
+                
+                
+            </center>
+            </h:form>
+            <center>
+            <br/>
+            <p:commandButton value = "Ejecutar" update="guess_form" actionListener="#{guessBean.guess()}"></p:commandButton>
+            <p:commandButton value = "Reiniciar" update="guess_form" actionListener="#{guessBean.restart()}"></p:commandButton>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <img src = "logo.jpg" align= "right" height="100" width="300"/>
+            </center>
+                
+
+        </h:body>
+    </html>
+
+    
